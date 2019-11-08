@@ -67,22 +67,33 @@
 # print(title_case())
 #
 # # problem 7
+#
+#
+# def replace(your_sentence):
+#     split_sentence = your_sentence.split(" ")
+#     the_new_list = []
+#     for each_word in split_sentence:
+#         if len(each_word) == 4:
+#             each_word = "#$%@"
+#             the_new_list.append(each_word)
+#         else:
+#             the_new_list.append(each_word)
+#     new_phrase = " ".join(the_new_list)
+#     return new_phrase
+#
+#
+# print(replace("Scout is a fake friend."))
+#
+# # problem 8
 
 
-def replace(your_sentence):
-    split_sentence = your_sentence.split(" ")
-    the_new_list = []
-    for each_word in split_sentence:
-        if len(each_word) == 4:
-            each_word = "#$%@"
-            the_new_list.append(each_word)
-        else:
-            the_new_list.append(each_word)
-    new_phrase = " ".join(the_new_list)
-    return new_phrase
-
-
-print(replace("Scout is a fake friend."))
-
-# problem 8
-# need a temporary variable to store what you're swapping
+def bubble_sort(names):
+    
+    for x in range(len(names)-1):
+        swaps = 0
+        if names[x] > names[x + 1]:
+            temp = names[x + 1]
+            names[x + 1] = names[x]
+            names[x] = temp
+            swaps += 1
+    return names
