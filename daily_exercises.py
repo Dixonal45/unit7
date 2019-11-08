@@ -97,3 +97,4 @@ def bubble_sort(names):
             names[x] = temp
             swaps += 1
     return names
+print()
