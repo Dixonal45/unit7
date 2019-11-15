@@ -14,7 +14,7 @@ def shift():
     """
     user_shift = int(input("How many letters do you want to shift the alphabet (0-26)?"))
     if user_shift > 26:
-
+        user_shift = (user_shift % 26)
     first = alphabet[0:user_shift]
     last = alphabet[user_shift:]
     alphabet_two = last + first
